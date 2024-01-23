@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/Src/Multimedia/Images/logotipo.jpg" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/Styles/Services.css">
+    <link rel="stylesheet" type="text/css" href="/Styles/Icons.css">
+    <link rel="stylesheet" type="text/css" href="/Styles/Menu1.css">
+    <link rel="stylesheet" type="text/css" href="/Styles/Menu2.css">
+    <title>Veterinaria</title>
+</head>
+<body>
+    <div class="carrousel">
+        <div class="conteCarrousel">
+            <div class="itemCarrousel" id="itemCarrousel-1">
+                <div class="itemCarrouselTarjeta">
+                    <img src="/Src/Multimedia/Images/adopcion.jpg" alt="image1">
+                    <div class="imageText">Campañas de adopcion frente al abandono y maltrato animal</div>
+                </div>  
+                <div class="itemCarrouselArrows">
+                    <a href="#itemCarrousel-4">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrousel-2">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="itemCarrousel" id="itemCarrousel-2">
+                <div class="itemCarrouselTarjeta">
+                    <img src="/Src/Multimedia/Images/baño.jpg" alt="image2">
+                    <div class="imageText">Servicio de baño y vacunacion por el personal</div>
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#itemCarrousel-1">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrousel-3">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="itemCarrousel" id="itemCarrousel-3">
+                <div class="itemCarrouselTarjeta">
+                    <img src="/Src/Multimedia/Images/comida.jpeg" alt="image3">
+                    <div class="imageText">Productos balanceados para adultos y cachorros, juguetes nuevos</div>
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#itemCarrousel-2">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrousel-4">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="itemCarrousel" id="itemCarrousel-4">
+                <div class="itemCarrouselTarjeta">
+                    <img src="/Src/Multimedia/Images/desparacitacion.jpeg" alt="image4">
+                    <div class="imageText">Cuida su salud, desparacitacion a 50 Bs.</div>
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#itemCarrousel-3">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrousel-1">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="conteCarrouselController">
+            <a href="#itemCarrousel-1">•</a>
+            <a href="#itemCarrousel-2">•</a>
+            <a href="#itemCarrousel-3">•</a>
+            <a href="#itemCarrousel-4">•</a>
+        </div>
+    </div>
+
+    <div class="App">
+        <div class='menu-container' id="perfil-menu-container">
+            <button class="menu-trigger">
+                <p class="user-label">Perfil</p>
+                <img src="/Src/Multimedia/Images/Perfil.png" alt="Imagen de usuario" />
+            </button>
+    
+            <div class="dropdown-menu" id="perfil-dropdown-menu">
+                <h3>Web Visitor<br /><span>user.password@gmail.com</span></h3>
+                <ul>
+                    <li class="dropdownItem">
+                        <img src="/Src/Multimedia/Images/Perfil.png" alt="My Profile" />
+                        <button>My Profile</button>
+                    </li>
+                    <li class="dropdownItem">
+                        <img src="/Src/Multimedia/Images/edit.png" alt="Edit Profile" />
+                        <button>Edit Profile</button>
+                    </li>
+                    <li class="dropdownItem">
+                        <img src="/Src/Multimedia/Images/envelope.png" alt="Inbox" />
+                        <button>Inbox</button>
+                    </li>
+                    <li class="dropdownItem">
+                        <img src="/Src/Multimedia/Images/settings.png" alt="Settings" />
+                        <button>Settings</button>
+                    </li>
+                    <li class="dropdownItem">
+                        <img src="/Src/Multimedia/Images/question.png" alt="Help" />
+                        <button>Help</button>
+                    </li>
+                    <li class="dropdownItem">
+                        <img src="/Src/Multimedia/Images/log-out.png" alt="Logout" />
+                        <button>Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <form class="form">
+            <h2>Escribenos</h2>
+            <p>
+                "Estamos aquí para ayudarte. Por favor, completa el siguiente formulario y 
+                 nos pondremos en contacto contigo lo antes posible."
+            </p>
+            <label for="nombre">Escribe tu nombre</label>
+            <input type="text" id="nombre" class="box" >
+            <label for="correo">Escribe tu correo</label>
+            <input type="email" id="correo" class="box">
+            <label for="mensaje">Escribe tu mensaje</label>
+            <textarea class="box" id="mensaje" cols="30" rows="10"></textarea>
+            <input type="submit" value="enviar" class="submit">
+        </form>
+
+        <div class="info">
+            <img src="/Src/Multimedia/Images/info-1.svg" class="img-1" alt="image">
+            <div class="location">
+                <div class="icons">
+                    <img src="/Src/Multimedia/Images/gps.svg" alt="image">
+                    <p>Cochabamba</p>
+                </div>
+                <div class="icons">
+                    <img src="/Src/Multimedia/Images/number.svg" alt="image">
+                    <p>+4 1234567</p>
+                </div>
+                <div class="icons">
+                    <img src="/Src/Multimedia/Images/email.svg" alt="image">
+                    <p>veterinaria@gmail.bo</p>
+                </div>
+            </div>
+            <div class="social">
+                <img src="/Src/Multimedia/Images/fa.svg" alt="image">
+                <img src="/Src/Multimedia/Images/tw.svg" alt="image">
+                <img src="/Src/Multimedia/Images/ins.svg" alt="image">
+            </div>
+        </div>
+    </div>
+
+    <div class="audio-row">
+        <img src="/Src/Multimedia/Images/p1.png" class="audio-img" alt="audio-image-1">
+        <div class="audio-info">
+          <p class="audio-title">Medico Jefe</p>
+          <audio class="audio-player" controls>
+            <source src="/Src/Multimedia/Audios/Medico_Jefe.mp3" type="audio/mpeg">
+            Tu navegador no admite el elemento de audio.
+          </audio>
+        </div>
+    </div>
+    
+      <div class="audio-row">
+        <img src="/Src/Multimedia/Images/p2.png" class="audio-img" alt="audio-image-2">
+        <div class="audio-info">
+          <p class="audio-title">Auxiliar Clinico</p>
+          <audio class="audio-player" controls>
+            <source src="/Src/Multimedia/Audios/Auxiliar_Clinico.mp3" type="audio/mpeg">
+            Tu navegador no admite el elemento de audio.
+          </audio>
+        </div>
+      </div>
+    
+      <div class="audio-row">
+        <img src="/Src/Multimedia/Images/p3.png" class="audio-img" alt="audio-image-3">
+        <div class="audio-info">
+          <p class="audio-title">Zootecnista</p>
+          <audio class="audio-player" controls>
+            <source src="/Src/Multimedia/Audios/Zootecnista.mp3" type="audio/mpeg">
+            Tu navegador no admite el elemento de audio.
+          </audio>
+        </div>
+        </div>
+
+        <div class="contenedor-imagenes">
+            <div class="contenedor-imagen">
+              <h2>
+                  <u>"Certificados"</u>
+              </h2>
+              <img src="/Src/Multimedia/Images/certificado1.jpeg" alt="grafico_1" />
+            </div>
+            <div class="separador-vertical"></div>
+            <div class="contenedor-imagen">
+              <h2>
+                  <u>"Premios"</u>
+              </h2>
+              <img src="/Src/Multimedia/Images/certificado2.jpg" alt="grafico_2" />
+            </div>
+          </div>
+
+    <div class="button-bar">
+        <a href="/Src/Views/Home.html" style="background-color: #cbe5ef; color: #000000;">Home <i class="menu-icon"></i></a>
+        <br />
+        <a href="/Src/Views/Services.html" style="background-color: #ff8000; color: #ffffff;">Services <i class="information-icon"></i></a>
+        <br />
+        <a href="/Src/Views/Blogs.html" style="background-color: #cbe5ef; color: #000000;">Blogs <i class="question-icon"></i></a>
+        <br />
+        <a href="/Src/Views/Animals.html" style="background-color: #cbe5ef; color: #000000;">Animals <i class="form-icon"></i></a>
+        <br />
+        <a href="/Src/Views/Contact.html" style="background-color: #cbe5ef; color: #000000;">Contact <i class="photo-icon"></i></a>
+        <br />
+        <a href="/Src/Views/Financing.html" style="background-color: #cbe5ef; color: #000000;">Financing <i class="finan-icon"></i></a>
+        <br />
+    </div>
+</body>
+</html>

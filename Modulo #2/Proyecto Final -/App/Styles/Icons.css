@@ -1,0 +1,121 @@
+body {
+	background: #EDE9E7;
+	font-family: 'Poppins', sans-serif;
+}
+
+.button-bar {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 35%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+    
+.button-bar a {
+	display: block;
+	position: relative;
+	margin-bottom: 10px;
+	padding: 10px 40px 10px 20px;
+	background-color: #cbe5ef;
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 30px;
+	transition: background-color 0.3s ease;
+	box-shadow: 0px 5px 0px #373c3c;
+}
+  
+.button-bar a:first-child {
+	background-color: #ff8000;
+	color: #ffffff;
+}
+  
+.button-bar a:hover {
+	padding-right: 50px;
+}
+  
+.button-bar a:hover::after {
+	border-width: 8px 10px 8px 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.menu-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url('/Src/Multimedia/Images/menu.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+}
+
+.information-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url('/Src/Multimedia/Images/informacion.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+}
+
+.question-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url('/Src/Multimedia/Images/question.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+}
+
+.form-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url('/Src/Multimedia/Images/icon.jpeg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+}
+
+.photo-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url('/Src/Multimedia/Images/formulario.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+}
+  
+.finan-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url('/Src/Multimedia/Images/financiamiento.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+}
+
+@media (max-width: 768px) {
+    .button-bar {
+        top: 50%; 
+        left: 10px; 
+    }
+
+    .button-bar a {
+        padding: 10px 30px 10px 15px;
+    }
+    
+    .button-bar a:hover {
+        padding-right: 40px;
+    }
+}

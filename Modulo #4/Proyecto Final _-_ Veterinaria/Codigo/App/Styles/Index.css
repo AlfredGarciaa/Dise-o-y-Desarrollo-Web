@@ -1,0 +1,97 @@
+body {
+  margin: 0; 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; 
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  text-align: center; 
+  background-color: #282c34; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  width: 100%;
+  position: fixed; 
+  height: 100vh;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none; 
+}
+
+.custom-loading-text {
+  text-align: center; 
+}
+
+.custom-loading-text.show {
+  display: block;
+}
+
+.custom-loading-text.hide {
+  display: none; 
+}
+
+@keyframes App-logo-spin {
+  from {
+      transform: rotate(0deg); 
+  }
+  to {
+      transform: rotate(360deg); 
+  }
+}
+
+.go-to-home-button {
+  padding: 10px 20px; 
+  background-color: #007bff; 
+  color: #fff; 
+  border: none; 
+  border-radius: 10px; 
+  font-size: 24px; 
+  cursor: pointer; 
+  margin-top: -300px; 
+  position: relative; 
+  overflow: hidden; 
+  transition: background-color 0.3s; 
+}
+
+.go-to-home-button::before {
+  content: ''; 
+  position: absolute;
+  top: 0;
+  left: -100%; 
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0.3) 100%
+  );
+  animation: shine 2s infinite;
+}
+
+.go-to-home-button:hover {
+  background-color: purple; 
+}
+
+@keyframes shine {
+  to {
+      left: 100%; 
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+  }
+}

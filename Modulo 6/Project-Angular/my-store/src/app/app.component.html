@@ -1,0 +1,10 @@
+<p>
+  <input type="text" [(ngModel)]="imgParent">
+</p>
+
+<button type = "button" (click)="togleImg()">Eliminar imagen</button>
+<p>{{togleImageState}}</p>
+<app-img *ngIf="togleImageState" [img]="imgParent" (loaded)="onLoaded($event)"></app-img>
+
+<app-product></app-product>
+<app-product [product]="product" *ngFor="let product of products"></app-product>

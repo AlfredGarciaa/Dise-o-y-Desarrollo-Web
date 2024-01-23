@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.adopt {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: linear-gradient(to bottom, yellow, rebeccapurple);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: help;
+  }
+
+  #imagen-compra {
+    position: absolute;
+    margin-bottom: 900px;
+    right: -60px; 
+    width: 150px;
+    height: 150px; 
+    top: -150px;
+    cursor: cell;
+}
+
+.fotos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 20px 20px 250px;
+    background: rgb(9, 74, 136);
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin: 20px;
+    height: 40vh;
+    overflow: hidden;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 52px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgba(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a {
+    color: #f3f3f3;
+}
+
+.card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back p {
+    letter-spacing: 1px;
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 20px 20px 250px;
+    background: rgb(47, 205, 78);
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.left img {
+    height: 100px;
+    margin-left: -200px;
+    margin-bottom: 180px;
+}
+
+.right {
+    text-align: justify;
+}
+
+.right p {
+    margin-top: 30px;
+}
+
+.audio-description {
+    margin-top: 10px;
+}
+
+h1 {
+    margin-left: 800px;
+    animation: mover 2s ease-in-out infinite alternate;
+    color: #ff00ff; 
+    font-weight: bold;
+    font-style: italic;
+    cursor: cell;
+    animation: tambaleo 0.8s infinite; 
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+@keyframes tambaleo {
+    0% {
+      transform: rotate(-2deg);
+    }
+    50% {
+      transform: rotate(2deg);
+    }
+    100% {
+      transform: rotate(-2deg);
+    }
+  }
+
+@media (max-width: 768px) {
+    .fotos, .videos {
+        margin-left: 20px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .left img {
+        margin: 0; 
+    }
+
+    .right {
+        text-align: left;
+    }
+}

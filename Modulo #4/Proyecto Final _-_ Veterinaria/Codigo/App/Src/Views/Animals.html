@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/Src/Multimedia/Images/logotipo.jpg" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/Styles/Animals.css">
+    <link rel="stylesheet" type="text/css" href="/Styles/Icons.css">
+    <link rel="stylesheet" type="text/css" href="/Styles/Menu1.css">
+    <link rel="stylesheet" type="text/css" href="/Styles/Menu2.css">
+    <title>Veterinaria</title>
+    <style>    
+        .card {
+          position: relative;
+          width: 200px;
+          height: 300px;
+          perspective: 1000px;
+          margin: 10px;
+        }
+    
+        .face {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          backface-visibility: hidden;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 10px;
+        }
+    
+        .front {
+          transform: rotateY(0deg);
+        }
+    
+        .back {
+          transform: rotateY(180deg);
+          background-color: #f2f2f2;
+          display: none;
+        }
+    
+        .card:hover .front {
+          transform: rotateY(-180deg);
+        }
+    
+        .card:hover .back {
+          display: flex;
+          transform: rotateY(0deg);
+        }
+    
+        .counter {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: auto;
+        }
+    
+        .counter input {
+          width: 30px;
+          text-align: center;
+        }
+    
+        .comments {
+          margin-top: 10px;
+        }
+    
+        .comments textarea {
+          width: 100%;
+          height: 60px;
+          resize: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="carrousel">
+        <div class="conteCarrousel">
+            <div class="itemCarrousel" id="itemCarrousel-1">
+                <div class="itemCarrouselTarjeta">
+                    <img src="/Src/Multimedia/Images/adopcion.jpg" alt="image1">
+                    <div class="imageText">IA daña a todo el planeta, pero aún hay tiempo para revertir si los gobiernos actúan ahora</div>
+                </div>  
+                <div class="itemCarrouselArrows">
+                    <a href="#itemCarrousel-4">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrousel-2">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="itemCarrousel" id="itemCarrousel-2">
+                <div class="itemCarrouselTarjeta">
+                    <img src="/Src/Multimedia/Images/baño.jpg" alt="image2">
+                    <div class="imageText">IA en la inteligencia artificial, mucho mayor del que se creía</div>
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#itemCarrousel-1">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrousel-3">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="itemCarrousel" id="itemCarrousel-3">
+                <div class="itemCarrouselTarjeta">
+                    <img src="/Src/Multimedia/Images/comida.jpeg" alt="image3">
+                    <div class="imageText">IA del consumo de productos animales</div>
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#itemCarrousel-2">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrousel-4">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="itemCarrousel" id="itemCarrousel-4">
+                <div class="itemCarrouselTarjeta">
+                    <img src="/Src/Multimedia/Images/desparacitacion.jpeg" alt="image4">
+                    <div class="imageText">IA del consumo de productos animales</div>
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#itemCarrousel-3">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrousel-1">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="conteCarrouselController">
+            <a href="#itemCarrousel-1">•</a>
+            <a href="#itemCarrousel-2">•</a>
+            <a href="#itemCarrousel-3">•</a>
+            <a href="#itemCarrousel-4">•</a>
+        </div>
+    </div>
+
+    <div class="App">
+        <div class='menu-container' id="perfil-menu-container">
+            <button class="menu-trigger">
+                <p class="user-label">Perfil</p>
+                <img src="/Src/Multimedia/Images/Perfil.png" alt="Imagen de usuario" />
+            </button>
+    
+            <div class="dropdown-menu" id="perfil-dropdown-menu">
+                <h3>Web Visitor<br /><span>user.password@gmail.com</span></h3>
+                <ul>
+                    <li class="dropdownItem">
+                        <img src="/Src/Multimedia/Images/Perfil.png" alt="My Profile" />
+                        <button>My Profile</button>
+                    </li>
+                    <li class="dropdownItem">
+                        <img src="/Src/Multimedia/Images/edit.png" alt="Edit Profile" />
+                        <button>Edit Profile</button>
+                    </li>
+                    <li class="dropdownItem">
+                        <img src="/Src/Multimedia/Images/envelope.png" alt="Inbox" />
+                        <button>Inbox</button>
+                    </li>
+                    <li class="dropdownItem">
+                        <img src="/Src/Multimedia/Images/settings.png" alt="Settings" />
+                        <button>Settings</button>
+                    </li>
+                    <li class="dropdownItem">
+                        <img src="/Src/Multimedia/Images/question.png" alt="Help" />
+                        <button>Help</button>
+                    </li>
+                    <li class="dropdownItem">
+                        <img src="/Src/Multimedia/Images/log-out.png" alt="Logout" />
+                        <button>Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="button-bar">
+        <a href="/Src/Views/Home.html" style="background-color: #cbe5ef; color: #000000;">Home <i class="menu-icon"></i></a>
+        <br />
+        <a href="/Src/Views/Services.html" style="background-color: #cbe5ef; color: #000000;">Services <i class="information-icon"></i></a>
+        <br />
+        <a href="/Src/Views/Blogs.html" style="background-color: #cbe5ef; color: #000000;">Blogs <i class="question-icon"></i></a>
+        <br />
+        <a href="/Src/Views/Animals.html" style="background-color: #ff8000; color: #ffffff;">Animals <i class="form-icon"></i></a>
+        <br />
+        <a href="/Src/Views/Contact.html" style="background-color: #cbe5ef; color: #000000;">Contact <i class="photo-icon"></i></a>
+        <br />
+        <a href="/Src/Views/Financing.html" style="background-color: #cbe5ef; color: #000000;">Financing <i class="finan-icon"></i></a>
+        <br />
+    </div>
+
+    <a href="/Src/Views/Financing.html" id="adoptButton">
+        <div class="adopt">
+            <img src="/Src/Multimedia/Images/adopt.jpg" alt="adopt" id="imagen-compra">
+            Adoptar
+        </div>
+    </a>
+    
+
+    <h1>GATITOS</h1>
+    <div class="fotos">    
+        <div class="card" id="gato1">
+          <div class="face front">
+            <img src="/Src/Multimedia/Images/gato1.png" alt="image1">
+            <h3>2 Unidades</h3>
+          </div>
+          <div class="face back">
+            <h3>Americano de pelo duro</h3>
+            <p>- El gato americano de pelo duro es grande y tiene un pelaje duro, elástico y áspero...</p>
+            <div class="link">
+              <a href="#" onclick="mostrarComentarios('gato1')">Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="counter" id="counterGato1">
+          <button onclick="decrementarContador('gato1')">-</button>
+          <input type="text" id="contadorGato1" value="2" readonly>
+          <button onclick="incrementarContador('gato1')">+</button>
+        </div>
+        <div class="comments" id="comentariosGato1">
+          <textarea placeholder="Escribe tu comentario"></textarea>
+          <button onclick="enviarComentario('gato1')">Enviar</button>
+        </div>
+
+    
+        <div class="card">
+            <div class="face front">
+                <img src="/Src/Multimedia/Images/gato2.png" alt="image1">
+                <h3>15 Unidades</h3>
+            </div>
+            <div class="face back">
+                <h3>Bombay</h3>
+                <p>- El bombay es un gato de constitución media y un pelaje negro azabache muy brillante que parece charol. El cráneo es ligeramente redondeado, tiene las orejas redondeadas y un hocico ancho.</p>
+                <div class="link">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face front">
+                <img src="/Src/Multimedia/Images/gato3.png" alt="image1">
+                <h3>0 Unidades</h3>
+            </div>
+            <div class="face back">
+                <h3>Exótico de pelo corto</h3>
+                <p>- Tiene la cabeza redondeada y ancha, las orejas pequeñas y separadas, y la cara corta y despejada. Los ojos son grandes y redondos y tienen un color vivo.</p>
+                <div class="link">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face front">
+                <img src="/Src/Multimedia/Images/gato4.png" alt="image1">
+                <h3>1 Unidad</h3>
+            </div>
+            <div class="face back">
+                <h3>Devon Rex</h3>
+                <p>- Las mejillas son anchas, los ojos y las orejas son muy grandes y están colocados en la parte baja de la cabeza. El pelaje corto tiene pelos de guarda ondulados, pero sobre todo está formado por un manto inferior de pelo.</p>
+                <div class="link">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face front">
+                <img src="/Src/Multimedia/Images/gato5.png" alt="image1">
+                <h3>4 Unidades</h3>
+            </div>
+            <div class="face back">
+                <h3>Munchkin</h3>
+                <p>- Los movimientos del munchkin son parecidos a los del hurón, ya que no tienen la gracia felina de los gatos de patas largas. Los munchkin tienen un cuerpo grueso con el pecho redondeado.</p>
+                <div class="link">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face front">
+                <img src="/Src/Multimedia/Images/gato6.png" alt="image1">
+                <h3>10 Unidades</h3>
+            </div>
+            <div class="face back">
+                <h3>Ocigato</h3>
+                <p>- El pecho es ancho y profundo y las patas, fuertes y musculosas. La cabeza es cuneiforme, con una cierta cuadratura en la mandíbula. Las orejas grandes y separadas y los mechones le dan un aspecto salvaje.</p>
+                <div class="link">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1>PERRITOS</h1>
+    <div class="videos">    
+        <div class="card" id="perro1">
+          <div class="face front">
+            <img src="/Src/Multimedia/Images/perro1.png" alt="image1">
+            <h3>20 Unidades</h3>
+          </div>
+          <div class="face back">
+            <h3>Bloodhound</h3>
+            <p>- Fácilmente reconocible por su cabeza arrugada, su aspecto noble, los párpados caídos...</p>
+            <div class="link">
+              <a href="#" onclick="mostrarComentarios('perro1')">Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="counter" id="counterPerro1">
+          <button onclick="decrementarContador('perro1')">-</button>
+          <input type="text" id="contadorPerro1" value="20" readonly>
+          <button onclick="incrementarContador('perro1')">+</button>
+        </div>
+        <div class="comments" id="comentariosPerro1">
+          <textarea placeholder="Escribe tu comentario"></textarea>
+          <button onclick="enviarComentario('perro1')">Enviar</button>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src="/Src/Multimedia/Images/perro2.png" alt="image1">
+                <h3>1 Unidad</h3>
+            </div>
+            <div class="face back">
+                <h3>Bóxer</h3>
+                <p>- Tiene un morro corto y un mentón ligeramente curvado hacia arriba. El color del pelaje corto puede ser marrón y atigrado, normalmente con algunas marcas blancas; también puede ser totalmente blanco.</p>
+                <div class="link">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face front">
+                <img src="/Src/Multimedia/Images/perro3.png" alt="image1">
+                <h3>6 Unidades</h3>
+            </div>
+            <div class="face back">
+                <h3>Beagle</h3>
+                <p>- Tienen un pelaje corto, denso, resistente a las inclemencias del clima y se presenta en varios colores y patrones. Miden de 33 a 40 cm y pesan de 10 o 11 kg.</p>
+                <div class="link">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face front">
+                <img src="/Src/Multimedia/Images/perro4.png" alt="image1">
+                <h3>0 Unidades</h3>
+            </div>
+            <div class="face back">
+                <h3>Basset Grifón vandeano (pequeño)</h3>
+                <p>- Tiene la forma típica de un Basset, con una longitud superior a su altura y patas cortas. Los adultos miden entre 34 y 38 cm. Su pelaje es áspero y de longitud media y se presenta en color blanco con marcas color limón, naranja, grisáceo o negro, o tricolor.</p>
+                <div class="link">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face front">
+                <img src="/Src/Multimedia/Images/perro5.png" alt="image1">
+                <h3>0 Unidades</h3>
+            </div>
+            <div class="face back">
+                <h3>Buhund noruego</h3>
+                <p>- Los machos adultos miden 45 cm de altura y, las hembras, algo menos. Ambos sexos pesan entre 14 y 18 kilos. El manto inferior lanoso está cubierto por un pelaje grueso y liso que puede ser de color beis, negro, rojo o grisáceo.</p>
+                <div class="link">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face front">
+                <img src="/Src/Multimedia/Images/perro6.png" alt="image1">
+                <h3>2 Unidades</h3>
+            </div>
+            <div class="face back">
+                <h3>Bull Terrier</h3>
+                <p>- La cabeza, larga, fuerte y ahuevada, termina en un hocico romano. El color más habitual en esta raza es el blanco, aunque a veces tienen alguna mancha de color en la cabeza o en el lomo.</p>
+                <div class="link">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script defer src="../Languaje/Animals.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+/* Estilo inicial del botón */
+#miBoton {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}

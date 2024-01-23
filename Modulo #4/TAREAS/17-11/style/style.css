@@ -1,0 +1,19 @@
+/* Centrar la imagen */
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+/* Diseño para el h1 */
+.dinamico {
+    font-size: 2em;
+    color: #3498db;
+    transition: font-size 0.5s, color 0.5s;
+}
+
+.dinamico:hover {
+    font-size: 2.5em;
+    color: #e74c3c;
+}
