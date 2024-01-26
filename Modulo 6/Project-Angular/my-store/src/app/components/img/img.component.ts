@@ -11,8 +11,9 @@ import { CommonModule } from '@angular/common';
 export class ImgComponent {
   @Input() img: string = 'valor init'
   @Output() loaded = new EventEmitter<string>
-  contador: number = 0
-  contadorFn: number | undefined
+  //counter: number = 0
+  //counterFn: number = 0
+  imgNull = '../../../assets/images/null.jpg'
   imgDefault = '../../../assets/images/default.jpg'
 
   constructor() {
@@ -31,10 +32,15 @@ export class ImgComponent {
   ngOnInit(): void {
     // before render
     // async fetch -- once time
-    this.contadorFn = window.setInterval(() => {
-      this.contador +=1
-      console.log('Run Contador')
-    }, 1000)
+    /*
+    if(typeof window != 'undefined') {
+      this.counterFn = window.setInterval(() => {
+        this.counter +=1
+        console.log('Run Counter')
+      }, 1000)
+    }
+    */
+   console.log('ngOnInit', 'imgValue=>', this.img)
   }
 
   ngAfterViewInit() {
@@ -45,12 +51,17 @@ export class ImgComponent {
 
   ngOnDestroy() {
     // delete -- once time
-    console.log('ngOnDestroy', 'imgValue=>', this.img)
-    window.clearInterval(this.contadorFn)
+    console.log('ngOnDestroy')
+    /*
+    if(typeof window != 'undefined') {
+      console.log('ngOnDestroy', 'imgValue=>', this.img)
+      window.clearInterval(this.counterFn)
+    }
+    */
   }
 
   imgError() {
-    this.img = this.imgDefault
+    this.img = this.imgNull
   }
 
   imgLoaded() {

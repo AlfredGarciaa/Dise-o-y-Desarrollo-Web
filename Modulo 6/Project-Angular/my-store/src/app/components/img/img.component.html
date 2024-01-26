@@ -1,10 +1,10 @@
-<img width="200px" (Load)='imgLoaded()' (error)="imgError()" [src]="img" *ngIf="img,else elseImg">
+<img (Load)='imgLoaded()' (error)="imgError()" [src]="img" *ngIf="img,else elseImg">
 
-<h3>{{contador}}</h3>
+<!--<h3>{{contador}}</h3>-->
 <ng-template>
-  <img [src]="imgDefault" alt="">
+  <img [src]="imgDefault" alt="No service">
 </ng-template>
 <ng-template #elseImg>
-  <img src="../../../assets/images/null.jpg" alt="">
+  <img [src]="imgDefault" alt="No service">
 </ng-template>
 
