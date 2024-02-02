@@ -1,14 +1,22 @@
 <div class="show-mobile">
   <div>
-    <button>
-      <img src="../../../assets/images/menu.jpg" alt="menu">
+    <button (click)="toggleMenu()">
+      <img src="../../../assets/images/icon_menu.svg" alt="menu">
     </button>
     <a href="">
-      <img src="../../../assets/images/logo.jpg" alt="logo">
+      <img src="../../../assets/images/logo_yard_sale.svg" alt="logo">
     </a>
     <a href="">
-      <img src="../../../assets/images/carrito.png" alt="carrito">
+      <img src="../../../assets/images/icon_shopping_cart.svg" alt="shopping">
     </a>
+  </div>
+  <div class="side-menu" [class.active]="activeMenu">
+    <button (click)="toggleMenu()">Close</button>
+    <ul>
+      <li><a href="">All</a></li>
+      <li><a href="">Clothes</a></li>
+      <li><a href="">Electronics</a></li>
+    </ul>
   </div>
 </div>
 
@@ -16,7 +24,7 @@
   <div>
     <nav>
       <a class="logo" href="">
-        <img src="../../../assets/images/logo.jpg" alt="logo">
+        <img src="../../../assets/images/logo_yard_sale.svg" alt="logo">
       </a>
       <ul>
         <li><a href="">All</a></li>
@@ -28,7 +36,7 @@
       <div class="account">alfred.gaariasgmail.com</div>
       <div>
         <a href="">
-          <img src="../../../assets/images/carrito.png" alt="carrito">
+          <img src="../../../assets/images/icon_shopping_cart.svg" alt="shopping">
         </a>
       </div>
     </div>
