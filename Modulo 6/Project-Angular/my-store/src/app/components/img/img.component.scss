@@ -1,3 +1,20 @@
 img{
   max-width: 100%;
 }
+
+.rotate-on-hover:hover {
+  animation: rotate-infinite 3s linear infinite;
+}
+
+@keyframes rotate-infinite {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+

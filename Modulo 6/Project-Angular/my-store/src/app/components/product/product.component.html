@@ -1,3 +1,12 @@
-<p>Name of Product: {{ product.name }}</p>
-<app-img [img]="product.img"></app-img>
-<h2>Price: {{ product.price }} $us.</h2>
+<div class="product-container">
+  <p><strong>Name of Product: </strong> <span id="productName">{{ product.title }}</span></p>
+  <app-img [img]="product.image"></app-img>
+  <h1><strong>Price: </strong> <span id="productPrice" class="price-animation">{{ product.price }} $us</span></h1>
+  <p><strong>Description: </strong> <span id="productDescription">{{ product.description }}</span></p>
+  <p><strong>Category: </strong> <span class="category" id="productCategory">{{ product.category }}</span></p>
+  <br>
+
+  <div class="button-container">
+      <button (click)="onAddToCart()">Add to Cart</button>
+  </div>
+</div>

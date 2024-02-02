@@ -1,4 +1,4 @@
-<img (Load)='imgLoaded()' (error)="imgError()" [src]="img" *ngIf="img,else elseImg">
+<img [src]="img" (load)="imgLoaded()" (error)="imgError()" class="rotate-on-hover" *ngIf="img; else elseImg">
 
 <!--<h3>{{contador}}</h3>-->
 <ng-template>
