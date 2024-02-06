@@ -1,10 +1,15 @@
+<br> <br>
+<p>{{ date | date: 'medium' }}</p>
 <div class="product-container">
-  <p><strong>Name of Product: </strong> <span id="productName">{{ product.title }}</span></p>
+  <p><strong>Name of Product: </strong> <span id="productName">{{ product.title | reverse }}</span></p>
   <app-img [img]="product.image"></app-img>
-  <h1><strong>Price: </strong> <span id="productPrice" class="price-animation">{{ product.price }} $us</span></h1>
-  <p><strong>Description: </strong> <span id="productDescription">{{ product.description }}</span></p>
+  <h1><strong>Price: </strong> <span id="productPrice" class="price-animation">{{ product.price | currency: '$us' }}</span></h1>
+  <p appHighlight><strong>Description: </strong> <span id="productDescription">{{ product.description }}</span></p>
   <p><strong>Category: </strong> <span class="category" id="productCategory">{{ product.category }}</span></p>
   <br>
+  <li>Rate: {{ product.rating.rate | percent:'1.2-2' }}</li>
+  <li>Count: {{ product.rating.count | percent:'1.2-2' }}</li>
+  <p>Date: {{ date | timeAgo }}</p>
 
   <div class="button-container">
       <button (click)="onAddToCart()">Add to Cart</button>
